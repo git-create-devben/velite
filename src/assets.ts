@@ -61,15 +61,15 @@ export const isRelativePath = (url: string): boolean => {
 /**
  * get public directory
  * @param buffer image buffer
+ * @param blurWidth width of the blur image, default to 8
  * @returns image object with blurDataURL
  */
-export const getImageMetadata = async (buffer: Buffer): Promise<Omit<Image, 'src'> | undefined> => {
+export const getImageMetadata = async (buffer: Buffer, blurWidth = 8): Promise<Omit<Image, 'src'> | undefined> => {
   const { default: sharp } = await import('sharp')
   const img = sharp(buffer)
   const { width, height } = await img.metadata()
   if (width == null || height == null) return
   const aspectRatio = width / height
-  const blurWidth = 8
   const blurHeight = Math.round(blurWidth / aspectRatio)
   const blurImage = await img.resize(blurWidth, blurHeight).webp({ quality: 1 }).toBuffer()
   const blurDataURL = `data:image/webp;base64,${blurImage.toString('base64')}`
