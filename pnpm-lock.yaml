@@ -43,8 +43,8 @@ importers:
         specifier: ^20.12.7
         version: 20.12.7
       '@zce/prettier-config':
-        specifier: ^0.2.0
-        version: 0.2.0(prettier@3.2.5)
+        specifier: ^0.3.0
+        version: 0.3.0(prettier@3.2.5)
       chokidar:
         specifier: ^3.6.0
         version: 3.6.0
@@ -2064,8 +2064,8 @@ packages:
       - vue
     dev: true
 
-  /@zce/prettier-config@0.2.0(prettier@3.2.5):
-    resolution: {integrity: sha512-Xh1K+3bCL1+i2hnD6L8u3o5LgNGB3QtMQt3AOZk20ELmwVLoBFQin5TPYmKdKSmg0eiuDUJD5UlMNU+CVti3gA==}
+  /@zce/prettier-config@0.3.0(prettier@3.2.5):
+    resolution: {integrity: sha512-4lZew9wWC8RdGiS81M+dMf5HAo+l78WYYn68Rte1TZSqbjb0wgQHW995IFbQ6+7a7mzoR6n9vVD3yMPOin9GMQ==}
     dependencies:
       '@ianvs/prettier-plugin-sort-imports': 4.2.1(prettier@3.2.5)
       prettier-plugin-tailwindcss: 0.5.13(@ianvs/prettier-plugin-sort-imports@4.2.1)(prettier@3.2.5)
